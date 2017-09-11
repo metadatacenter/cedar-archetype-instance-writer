@@ -8,10 +8,8 @@ branches:
 notifications:
   slack:
     secure: NrKI4VachwP+wQjgmp1yQKO1xze3Fzp+PX4o3Y2WVBopql2E4KPioTKKnmhQ2bHTSplVL6Z4cWfEjVwuJDP8q7xkf35ECqk/4yL9d35l7OBNraEjJNskwpH9wFX2f9OIlWbpUns1b8mVLLWILzYn5W6U7f7/DpIyZ3AObnLv4hWvfgxaCcs60nZr2aTsqGEPznQVPbIypXV+KPvMw7aQ+KTI1wJ2b8kZMDtpgNqftT+ytw8PMIA/PngGlOYU10fpppAdodB4SJsb3Qk5FYPGpzr3pyVENWLhwkT88hg4lzbas71c/zy8yvo8Z/vrOEHavU1oYHUBWkbdbq/V1hw8Pj7aJkzGEDQtUKcJPIG9E1xOy8z8PKqNWPVgQ31ZWN0yKaQCLY7DF+xm8dgZy75dfDePMmzqvesNYnfeaTrUBlj/o0rwytC3bYWn2J6dFRaQcQjgZ/TPCWy+E9l8GYZLpdfwL8T8ObnbzYM1id7iNj21R7GQdRBgie7Y/k+JmGw9t3mxSlTYPPKaMuWhS2eEgnqjKiAeNy4cX6VDvDOUt3aKZLxAE69uw9Z7jgSqLtIvHzn8EdVzaUKq7+H3FtBQXHM3oud2TajoUIYF9xyBHD5NtvIe8/cqfhdH84hYFZVfg7ynsNCgyAs9a0yXKBZZmdS08PuB+Z1rmFUSAPbGUkw=
-install: '[ ${TRAVIS_PULL_REQUEST} = ''false'' ] && mvn -DskipTests=false clean deploy
-  --settings .m2/travis-settings.xml'
-script: '[ ${TRAVIS_PULL_REQUEST} = ''false'' ] && mvn -DskipTests=true clean --settings
-  .m2/travis-settings.xml'
+install: '[ ${TRAVIS_PULL_REQUEST} = ''false'' ] && mvn -DskipTests=false clean deploy --settings .m2/travis-settings.xml'
+script: '[ ${TRAVIS_PULL_REQUEST} = ''false'' ] && mvn -DskipTests=true clean --settings .m2/travis-settings.xml'
 env:
   global:
   - secure: JJQq6Aps/kBvuo3zCfptcrKWb6pnFP0gq29gwoc+V3gSwHtg9cGKrGol4blBWWwiETIBkhjGqyC9iJWZhhlrVI/JdiH4f8R746eD2ezSKrMwVd+RcY/rtfjKgkC0SZm8/+uSMJzgim3/Rj18U8sDCA260VgH4wLibazZeez3+ULM3rY9+u631+dzEbmMc6YT8+6O45EH5Ly/SLsnBS+X1uXp/WsS8pZC4csWGmz2n4GjxDdoRSvPqTGSYrDYygK2YgtZGvHlZWs0zyC4xRJQQn2WSbHEua1/HSK/c6Yjr4GYcGSpgpcM/9iiXafWVrZFrAdXlaqoP1DDV3XMxTtiyf6rMsXn/dJEDzBL5dVcUri9CZ0i5bEZRfPT24A+rxpADCTgcqfiR69hD2vzt0C0rYMzv+WZdCzT9JorS0X9Gqdt4kgjRD6pW2fr9oZIafNrHPPDYJoctyv8aCdrXvotXp9oKkkuVY2X11O2acs23uffiqQsO3nQliBnDdfV4mf2ua++jUv3Nidmst6rjN1w62fIPHFRfPVYNqOKl2660ZkUdBG9i36HyV9FrzItlIxhszCVP/xG0+/94U2euHKsOHBJuSBJMlH6qMZFzRoHq4Fg+zhUYzgl4K8iMf5KMdv9OBymrOypNEGO79UGVYvaucWTpTXfKJsHw7KlPX/Yu60=
